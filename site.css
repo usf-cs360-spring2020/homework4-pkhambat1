@@ -1,0 +1,24 @@
+a {
+    text-decoration: underline;
+}
+
+.hero.is-info {
+    /* background-color: #fc9842 !important;  */
+    /* background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%) !important; */
+    background: linear-gradient(to right, #22c1c3, #fdbb2d) !important; 
+}
+
+.image.is-180x180 {
+    height: 180px;
+    width: 180px;
+}
+
+.image.is-960x500 {
+    width: 960px;
+    height: 500px;
+}
+
+.image.is-300x300 {
+    width: 300px;
+    height: 300px;
+}
