@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
 
   <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="circle-packing.css">
+  <link rel="stylesheet" href="visualizations.css">
 
   <!-- Load Font Awesome 5 (free) icons -->
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
 </head>
 
 
@@ -39,7 +39,7 @@
         <div class="navbar-brand">
           <!-- TODO: Change link to repository homepage if needed -->
           <!-- TODO: Change which navbar-item is-active if needed -->
-          <a class="navbar-item is-active" href="index.html">
+          <a class="navbar-item" href="index.html">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Home</span>
           </a>
@@ -71,9 +71,9 @@
                   <span>Circular Dendogram</span>
                 </a>
                 <!-- Change titles of pgs -->
-                <a href="circle-packing.html" class="navbar-item">
-                  <span class="icon"><i class="far fa-dot-circle"></i></span>
-                  <span>Circle Packing</span>
+                <a href="partition.html" class="navbar-item is-active">
+                  <span class="icon"><i class="fas fa-icicles"></i></span>
+                  <span>Partition Layout</span>
                 </a>
                 
               </div>
@@ -99,7 +99,7 @@
   <section class="section">
     <div class="container">
       <h1 class="title">
-        Circle Packing
+        Partition Layout
       </h1>
       <h2 class="subtitle">
         D3 v5
@@ -107,22 +107,49 @@
 
       <h4 style="font-family: sans-serif;font-weight: 200;padding-top:30px;">SFFD Calls for Service Categories, Mar 2020
       </h4>
-      <p style="color:red;">Unfortuately this could not be ready in time.</p>
       <figure>
-        <svg id="packed" width="960" height="600"></svg>
+        <svg id="packed" width="960" height="500"></svg>
 
 
         <figcaption>
-          Created By: Pezanne Khambatta <br> 
-          <!-- Source: <a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6/data">311 Cases</a> (<a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods/p5b7-5n3h">Neighborhoods</a>, -->
-          <!-- <a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Streets-Active-and-Retired/3psu-pn9h">Streets</a>) -->
-        </figcaption>
+            Created By: Pezanne Khambatta <br> 
+            Source: <a href="https://data.sfgov.org/Public-Safety/Fire-Department-Calls-for-Service/nuek-vuh3" target="_blank">SFFD Calls For Service</a> 
+          </figcaption>
       </figure>
 
 
       <div class="content" style="margin-top:50px;">
+        
+          <h4><u>Encoding</u></h4>
+          <p>
+            The following categories for SFFD Service Calls are encoded as a Partition Layout - All Incidents, Call Type Group, Call Type and Unit Type. The hierarchy level of each node is encoded with color and vertical position. The width of each rectangle represents the fraction of records it comprises.
+          </p>
+          
+          <h4><u>Interactivity</u></h4>
+          <p>
+            Hovering over the rectangles will display information about the incident grouping and highlight the ancestors. 
+          </p>
+          
+          <h4><u>Conclusion</u></h4>
+          <p>
+            From the visualization above, I can get a good sense of the weight of each category because the number of records is encoded into the rectangle width.
+          </p>
+          <p>
+            It can be seen that a near-majority of fire related cases are potentially life-threatening. Also, almost all potentially life-threatening cases are medical incidents. 
+          </p>
+          <p>
+            A very small number of incidents are actually labeled under "fire".
+          </p>
 
-      </div>
+          <blockquote>
+            <h5>
+              Acknowledgements:
+            </h5>
+              <p> Partition Layout Inspiration - Sophie Engle: <cite><a
+                href="https://observablehq.com/@sjengle/java-11-api-hierarchy-visualization">https://observablehq.com/@sjengle/java-11-api-hierarchy-visualization</a></cite>
+              </p>
+            </blockquote>
+          </div>
     </div>
 
   </section>
@@ -177,5 +204,5 @@
     });
   </script>
   <!-- End mobile menu responsiveness -->
-  <script src="circle-packing.js"></script>
+  <script src="partition.js"></script>
 </body>

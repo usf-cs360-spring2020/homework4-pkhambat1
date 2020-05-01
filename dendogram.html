@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<link rel="stylesheet" href="dendogram.css">
+<link rel="stylesheet" href="visualizations.css">
 
 
 <head>
@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="site.css">
   
   <!-- Load Font Awesome 5 (free) icons -->
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
   
 </head>
 
@@ -42,7 +42,7 @@
         <div class="navbar-brand">
           <!-- TODO: Change link to repository homepage if needed -->
           <!-- TODO: Change which navbar-item is-active if needed -->
-          <a class="navbar-item is-active" href="index.html">
+          <a class="navbar-item" href="index.html">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Home</span>
           </a>
@@ -69,14 +69,14 @@
               </a>
               
               <div class="navbar-dropdown">
-                <a href="dendogram.html" class="navbar-item">
+                <a href="dendogram.html" class="navbar-item is-active">
                   <span class="icon"><i class="fas fa-code-branch"></i></span>
                   <span>Circular Dendogram</span>
                 </a>
                 <!-- Change titles of pgs -->
-                <a href="circle-packing.html" class="navbar-item">
-                  <span class="icon"><i class="far fa-dot-circle"></i></span>
-                  <span>Circle Packing</span>
+                <a href="partition.html" class="navbar-item">
+                  <span class="icon"><i class="fas fa-icicles"></i></span>
+                  <span>Partition Layout</span>
                 </a>
                 
               </div>
@@ -128,7 +128,7 @@
         
         <h4><u>Interactivity</u></h4>
         <p>
-          Hovering over the circles will display information about the incident grouping and highlight the ancestors.
+          Hovering over the circles will display information about the incident grouping and highlight the ancestors. Clicking on a child node will expand its children and clicking on a root node will expand to its parent.
         </p>
         
         <h4><u>Conclusion</u></h4>
